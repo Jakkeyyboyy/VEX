@@ -1,0 +1,28 @@
+void autonomous(void) {
+  // ..........................................................................
+  // Insert autonomous user code here.
+MotorGroup2.spinToPosition(0, degrees);
+Drivetrain.setStopping(hold);
+Drivetrain.setTimeout(3,seconds);
+Drivetrain.driveFor(forward,30,inches);
+Drivetrain.setStopping(hold);
+Drivetrain.turnFor(right,150,degrees);
+//after this line it turns right
+Drivetrain.setTimeout(3, seconds);
+Drivetrain.setStopping(hold);
+Drivetrain.driveFor(forward,25,inches);
+Drivetrain.turnFor(left,150,degrees);
+
+//now this is the hard part of where it rotates the forklift down drives forward and trys to pick the mobile goal up
+Drivetrain.setTimeout(3,seconds);
+Drivetrain.setStopping(hold);
+Drivetrain.driveFor(forward,15,inches);
+Drivetrain.setTimeout(1,seconds);
+Drivetrain.setStopping(hold);
+MotorGroup2.spinFor(forward,300,degrees);
+MotorGroup2.setTimeout(10,seconds);
+MotorGroup2.setStopping(hold);
+Drivetrain.driveFor(reverse,500,inches);
+Drivetrain.turnFor(right,2700,degrees);
+Drivetrain.setTimeout(10,seconds);
+Drivetrain.setStopping(hold);
